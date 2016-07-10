@@ -4,7 +4,7 @@
         designWidth = 960,                  //设计图宽度
         baseWidth = 100,                    //基准宽度
         maxWidth = 640,                     //最大宽度
-        resize = 'orientationchange' in window ? 'orientationchange' : 'resize', 
+        resize = 'onorientationchange' in window ? 'orientationchange' : 'resize', 
         resizeEvent = function(){
             var pageWidth = docEle.clientWidth;
             if( pageWidth > maxWidth ){
