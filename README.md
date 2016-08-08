@@ -1,4 +1,4 @@
-# js-rem
+# Dynamic rem
 rem单位实现等比缩放
 
 designWidth：设计图宽度
