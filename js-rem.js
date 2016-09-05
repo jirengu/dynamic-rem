@@ -5,7 +5,7 @@
         baseWidth = 100,                    //基准宽度
         maxWidth = 640,                     //最大宽度
         resize = 'onorientationchange' in window ? 'orientationchange' : 'resize', 
-        resizeEvent = function(){
+        resizeHandler = function(){
             var pageWidth = docEle.clientWidth;
             if( pageWidth > maxWidth ){
                 pageWidth = maxWidth;
@@ -13,6 +13,6 @@
             docEle.style.fontSize = baseWidth * ( pageWidth / designWidth ) + 'px';
         };
 
-    doc.addEventListener('DOMContentLoaded', resizeEvent, false);
-    window.addEventListener( resize, resizeEvent, false); 
+    doc.addEventListener('DOMContentLoaded', resizeHandler, false);
+    window.addEventListener( resize, resizeHandler, false); 
 })(window);
