@@ -7,7 +7,7 @@
         resize = 'onorientationchange' in window ? 'orientationchange' : 'resize', 
         resizeHandler = function(){
             var pageWidth = docEle.clientWidth;
-            if( pageWidth > maxWidth ){
+            if( maxWidth && (pageWidth > maxWidth) ){
                 pageWidth = maxWidth;
             }
             docEle.style.fontSize = baseWidth * ( pageWidth / designWidth ) + 'px';
